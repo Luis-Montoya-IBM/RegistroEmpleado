@@ -68,7 +68,7 @@
                     <input type="radio" name="genero" value="f"> Femenino
                 </div>
                 <button type="reset" class="btn btn-default">Limpiar</button>
-                <button type="submit" class="btn btn-default">Enviar</button>
+                <button type="submit" class="btn btn-default">Registrar</button>
             </form></br>
             <button class="btn btn-primary" id="visualizar">Visualizar empleados</button>
         </div>
