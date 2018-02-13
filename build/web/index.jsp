@@ -24,11 +24,25 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script type="application/javascript">
+            $(document).ready(function(){
+                $("#visualizar").click(function(){
+                    window.location = "visualizarEmpleados.jsp";
+                });
+            });
+        </script>
     </head>
     <body>
         <%
-            //request.get        
-        %>
+                if(request.getAttribute("mensaje") != null){
+                    String mensaje =  request.getAttribute("mensaje").toString();
+                    %>
+                    <script type="application/javascript">
+                        alert('<%= mensaje %>');
+                    </script>
+                    <%
+                }
+            %>
         <div class="container">
             <h1>Registro de usuarios</h1>
             <form role="form" action="RegistraEmpleadoController" method="POST">
@@ -55,8 +69,8 @@
                 </div>
                 <button type="reset" class="btn btn-default">Limpiar</button>
                 <button type="submit" class="btn btn-default">Enviar</button>
-                </div>
-            </form>
+            </form></br>
+            <button class="btn btn-primary" id="visualizar">Visualizar empleados</button>
         </div>
     </body>
 </html>
