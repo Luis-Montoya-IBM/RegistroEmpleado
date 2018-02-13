@@ -31,7 +31,7 @@
         %>
         <div class="container">
             <h1>Registro de usuarios</h1>
-            <form role="form">
+            <form role="form" action="RegistraEmpleadoController" method="POST">
                 <div class="form-group">
                     <label for="nombre">Nombre(s): </label>
                     <input type="text" class="form-control" id="nombre" name="nombre"/>
@@ -48,16 +48,13 @@
                     <label for="feNacimiento">Fecha de nacimiento: </label>
                     <input type="date" class="form-control" id="feNacimiento" name="feNacimiento"/>
                 </div>
-                <div>
-                    
-                    <br/><br/>
-                    <br/><br/>
-                    <br/><br/>
-                    <label for="genero">Genero: </label><br/>
-                    <input type="radio" name="genero" value="f" checked> Masculino
-                    <input type="radio" name="genero" value="m"> Femenino<br/><br/>
-                    <input type="reset" value="Limpiar"/>
-                    <input type="submit" value="Enviar"/>
+                <div class="form-group">
+                    <label for="genero">Género: </label>
+                    <input type="radio" name="genero" value="m" checked> Masculino
+                    <input type="radio" name="genero" value="f"> Femenino
+                </div>
+                <button type="reset" class="btn btn-default">Limpiar</button>
+                <button type="submit" class="btn btn-default">Enviar</button>
                 </div>
             </form>
         </div>

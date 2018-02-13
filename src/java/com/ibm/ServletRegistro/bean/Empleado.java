@@ -16,7 +16,7 @@ public class Empleado implements Serializable{
     private String apPaterno;
     private String apMaterno;
     private String feNacimiento;
-    private String genero;
+    private char genero;
 
     public Empleado() {
     }
@@ -53,11 +53,11 @@ public class Empleado implements Serializable{
         this.feNacimiento = feNacimiento;
     }
 
-    public String getGenero() {
+    public char getGenero() {
         return genero;
     }
 
-    public void setGenero(String genero) {
+    public void setGenero(char genero) {
         this.genero = genero;
     }
     
